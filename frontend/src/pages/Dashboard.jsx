@@ -239,7 +239,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { AuthContext } from "../context/AuthContext";  // Assuming AuthContext is used to manage authentication
+import { AuthContext } from "../context/AuthContext";
+import './Dashboard.css'  // Assuming AuthContext is used to manage authentication
 
 export default function Dashboard() {
     const [products, setProducts] = useState([]); // State to store products fetched from the server
@@ -294,54 +295,66 @@ export default function Dashboard() {
             
             {/* Button to add a new product */}
             <button
-  className="add-product-btn"
-  onClick={() => navigate("/add-product")}
-  style={{
-    backgroundColor: '#4CAF50', /* Green background */
-    color: 'white', /* White text color */
-    fontSize: '16px', /* Text size */
-    padding: '12px 20px', /* Padding for spacing */
-    border: 'none', /* Remove border */
-    borderRadius: '8px', /* Rounded corners */
-    cursor: 'pointer', /* Pointer cursor on hover */
-    transition: 'background-color 0.3s ease, transform 0.2s ease', /* Smooth transition */
-  }}
-  onMouseOver={(e) => e.target.style.backgroundColor = '#45a049'}  // Hover effect
-  onMouseOut={(e) => e.target.style.backgroundColor = '#4CAF50'} // Reset to default background color
-  onMouseDown={(e) => e.target.style.backgroundColor = '#3e8e41'} // Active (click) effect
-  onMouseUp={(e) => e.target.style.backgroundColor = '#45a049'} // Reset to hover background color
->
-  Add Product
-</button>
+                className="add-product-btn"
+                onClick={() => navigate("/add-product")}
+                style={{
+                    backgroundColor: '#4CAF50', /* Green background */
+                    color: 'white', /* White text color */
+                    fontSize: '16px', /* Text size */
+                    padding: '12px 20px', /* Padding for spacing */
+                    border: 'none', /* Remove border */
+                    borderRadius: '8px', /* Rounded corners */
+                    cursor: 'pointer', /* Pointer cursor on hover */
+                    transition: 'background-color 0.3s ease, transform 0.2s ease', /* Smooth transition */
+                }}
+                onMouseOver={(e) => e.target.style.backgroundColor = '#45a049'}  // Hover effect
+                onMouseOut={(e) => e.target.style.backgroundColor = '#4CAF50'} // Reset to default background color
+                onMouseDown={(e) => e.target.style.backgroundColor = '#3e8e41'} // Active (click) effect
+                onMouseUp={(e) => e.target.style.backgroundColor = '#45a049'} // Reset to hover background color
+                >   
+                 Add Product
+            </button>
 
 
-            {/* Displaying the list of products added by the seller */}
-            <div className="seller-products">
-                <h3>Your Products</h3>
+            
+                    
+                    <div className="seller-products">
+                    <h3>Your Products</h3>
 
-                {products.length === 0 ? (
-                    <p>No products found. Start adding products!</p>
-                ) : (
-                    <div className="product-grid">
-                        {products.map((product) => (
-                            <div key={product._id} className="product-item">
-                                <img src={product.imageUrl} alt={product.name} className="product-image" />
-                                <h4>{product.name}</h4>
-                                <p>{product.description}</p>
-                                <p><strong>Price:</strong> ${product.price}</p>
-                                
-                                {/* Buttons for Update and Delete */}
-                                {/* <button onClick={() => handleUpdate(product._id)} className="update-btn">
-                                    Update
-                                </button> */}
+                    {products.length === 0 ? (
+                        <p>No products found. Start adding products!</p>
+                    ) : (
+                    <table className="product-table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Book Name</th>
+                        <th>Description</th>
+                        <th>Stock</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {products.map((product, index) => (
+                        <tr key={product._id}>
+                            <td>{index + 1}</td>
+                            <td>{product.name}</td>
+                            <td>{product.description}</td>
+                            <td>{product.stock}</td>
+                            <td>${product.price}</td>
+                            <td>
                                 <button onClick={() => handleDelete(product._id)} className="delete-btn">
                                     Delete
                                 </button>
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </div>
+                            </td>
+                        </tr>
+                ))}
+            </tbody>
+        </table>
+    )}
+</div>
+
         </div>
     );
 }

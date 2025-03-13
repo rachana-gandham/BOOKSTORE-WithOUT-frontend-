@@ -285,7 +285,7 @@ export default function Register() {
                                         style={{
                                             width: "100%",
                                             padding: "10px",
-                                            backgroundColor: "#007bff",
+                                            backgroundColor: "#064D51",
                                             color: "white",
                                             border: "none",
                                             cursor: "pointer",

@@ -150,7 +150,7 @@ export default function Navigation() {
                 justifyContent: "space-between", // Home left, other links right
                 alignItems: "center",
                 padding: "15px 20px",
-                backgroundColor: "#80727B",
+                backgroundColor: "#1E9C99",
             }}
         >
             {/* Home Link (Left Side) */}
@@ -165,7 +165,7 @@ export default function Navigation() {
                     fontSize: "16px",
                     fontWeight: "bold",
                 }}
-                onMouseEnter={(e) => (e.target.style.backgroundColor = "#381D2A")}
+                onMouseEnter={(e) => (e.target.style.backgroundColor = "#064D51")}
                 onMouseLeave={(e) => (e.target.style.backgroundColor = "transparent")}
             >
                 Home
@@ -187,7 +187,7 @@ export default function Navigation() {
                                     fontSize: "16px",
                                     fontWeight: "bold",
                                 }}
-                                onMouseEnter={(e) => (e.target.style.backgroundColor = "#381D2A")}
+                                onMouseEnter={(e) => (e.target.style.backgroundColor = "#064D51")}
                                 onMouseLeave={(e) => (e.target.style.backgroundColor = "transparent")}
                             >
                                 Cart
@@ -206,7 +206,7 @@ export default function Navigation() {
                                     fontSize: "16px",
                                     fontWeight: "bold",
                                 }}
-                                onMouseEnter={(e) => (e.target.style.backgroundColor = "#381D2A")}
+                                onMouseEnter={(e) => (e.target.style.backgroundColor = "#064D51")}
                                 onMouseLeave={(e) => (e.target.style.backgroundColor = "transparent")}
                             >
                                 Dashboard
@@ -225,7 +225,7 @@ export default function Navigation() {
                                 fontWeight: "bold",
                                 cursor: "pointer",
                             }}
-                            onMouseEnter={(e) => (e.target.style.backgroundColor = "#381D2A")}
+                            onMouseEnter={(e) => (e.target.style.backgroundColor = "#064D51")}
                             onMouseLeave={(e) => (e.target.style.backgroundColor = "transparent")}
                         >
                             Logout
@@ -244,7 +244,7 @@ export default function Navigation() {
                                 fontSize: "16px",
                                 fontWeight: "bold",
                             }}
-                            onMouseEnter={(e) => (e.target.style.backgroundColor = "#381D2A")}
+                            onMouseEnter={(e) => (e.target.style.backgroundColor = "#064D51")}
                             onMouseLeave={(e) => (e.target.style.backgroundColor = "transparent")}
                         >
                             Register
@@ -261,7 +261,7 @@ export default function Navigation() {
                                 fontSize: "16px",
                                 fontWeight: "bold",
                             }}
-                            onMouseEnter={(e) => (e.target.style.backgroundColor = "#381D2A")}
+                            onMouseEnter={(e) => (e.target.style.backgroundColor = "#064D51")}
                             onMouseLeave={(e) => (e.target.style.backgroundColor = "transparent")}
                         >
                             Login

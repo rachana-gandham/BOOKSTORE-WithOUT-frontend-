@@ -96,7 +96,7 @@ export default function Cart() {
                                         boxShadow: "0px 1px 4px black",
                                         padding: "15px",
                                         borderRadius: "8px",
-                                        background: "#fff",
+                                        background: "#C0F2F3",
                                         fontSize: "14px",
                                         textAlign: "center",
                                         margin: cart.length === 1 ? "0 auto" : "unset", // Center if only 1 book
@@ -117,17 +117,17 @@ export default function Cart() {
                                     />
                                     <p><strong>Quantity:</strong> {item.quantity}</p>
                                     <p><strong>Price:</strong> Rs. {item.productId.price}</p>
-                                    <p style={{ fontSize: "13px", marginBottom: "10px" }}>
+                                    {/* <p style={{ fontSize: "13px", marginBottom: "10px" }}>
                                         <strong>Description:</strong> {item.productId.description}
-                                    </p>
-                                    <p><strong>Total Price:</strong> Rs. {(item.quantity * item.productId.price).toFixed(2)}</p>
+                                    </p> */}
+                                    {/* <p><strong>Total Price:</strong> Rs. {(item.quantity * item.productId.price).toFixed(2)}</p> */}
 
                                     <button
                                         onClick={() => removeFromCart(item.productId._id)}
                                         style={{
                                             marginTop: "10px",
                                             padding: "8px 12px",
-                                            backgroundColor: "red",
+                                            backgroundColor: "#064D51",
                                             color: "white",
                                             border: "none",
                                             borderRadius: "5px",
@@ -148,7 +148,7 @@ export default function Cart() {
                             onClick={handleCheckout}
                             style={{
                                 padding: "10px 20px",
-                                backgroundColor: "green",
+                                backgroundColor: "#064D51",
                                 color: "white",
                                 border: "none",
                                 borderRadius: "5px",

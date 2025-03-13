@@ -6,7 +6,7 @@
     justify-content: center;
     /* background-image: url("https://t4.ftcdn.net/jpg/06/42/33/73/360_F_642337303_RRftmunXi0RBj8rWNQVg88Kj6h4PeslQ.jpg"); */
     background-size: cover;
-    background-color: #BBACC1;
+    background-color: #C0F2F3;
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
@@ -29,12 +29,12 @@
 }
 
 .category-select {
-    background-color:#381D2A;
+    background-color:#064D51;
     color: white;
     padding: 8px;
-    border-radius: 5px;
+    /* border-radius: 0px; */
     font-size: 16px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     cursor: pointer;
     appearance: none;
 }
@@ -49,7 +49,7 @@
 .book-card {
     width: 220px; /* Ensure all book cards have the same width */
     height: 400px; /* Set a fixed height so all cards remain the same */
-    background: #F2E4DE;
+    background: #C0F2F3;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0px 1px 4px black;
@@ -96,13 +96,13 @@
 .book-price {
     font-size: 14px;
     font-weight: bold;
-    color: #007bff;
+    color: #1E9C99;
 }
 
 /* ADD TO CART BUTTON */
 .add-to-cart-btn {
     padding: 8px 12px;
-    background-color: #381D2A;
+    background-color: #064D51;
     color: white;
     border: none;
     border-radius: 5px;
@@ -113,5 +113,5 @@
 }
 
 .add-to-cart-btn:hover {
-    background-color:#BBACC1;
+    background-color:#1E9C99;
 }

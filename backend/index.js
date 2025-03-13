@@ -12,7 +12,7 @@ const paymentRoutes=require("./routes/paymentRoutes")
 const bookRoutes = require("./routes/bookRoutes");
 
 app.use(cors({
-    origin: "http://localhost:5173", // ✅ Allow frontend requests
+    origin: "*", // ✅ Allow frontend requests
     credentials: true
 }));
 
